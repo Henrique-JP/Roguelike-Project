@@ -15,6 +15,8 @@ public class Weapon : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPos.z = firePoint.position.z; // Garante que ambos estão no mesmo plano
+
             Vector2 direction = (mouseWorldPos - firePoint.position).normalized;
 
             fireMode.Fire(firePoint, direction);

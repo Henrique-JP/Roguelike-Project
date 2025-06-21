@@ -21,5 +21,10 @@ public class OrbitingWeapon : MonoBehaviour
         // Faz a arma olhar para o mouse
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        // Flip horizontal quando o mouse está à esquerda do jogador
+        Vector3 scale = transform.localScale;
+        scale.y = (mouseWorldPos.x < player.position.x) ? -0.5f : 0.5f; //a escala é a atual baseada na pistola, posteriormente pode ser necessário fazer de forma mais modular
+        transform.localScale = scale;
     }
 }
