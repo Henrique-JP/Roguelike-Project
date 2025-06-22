@@ -1,6 +1,5 @@
 using UnityEngine;
-
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public int damage = 1; // Quanto de dano essa bala causa
 
@@ -17,18 +16,18 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Verifica se o objeto colidido tem a tag "Enemy"
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Player")) // Verifica se colidiu com o jogador
         {
-            // Tenta obter o componente EnemyHealth do objeto colidido
-            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            // Tenta obter o componente PlayerHealth do objeto colidido
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
-            // Se o inimigo tiver o script EnemyHealth, aplica o dano
-            if (enemyHealth != null)
+            // Se o jogador tiver o script PlayerHealth, aplica o dano
+            if (playerHealth != null)
             {
-                enemyHealth.TakeDamage(damage); // Chama o método TakeDamage no inimigo
+                playerHealth.TakeDamage(damage); // Chama o método TakeDamage no jogador
             }
 
-            // Destrói a bala após colidir com o inimigo
+            // Destrói a bala após colidir com o jogador
             Destroy(gameObject);
         }
         // Opcional: Destruir a bala se ela colidir com algo que não seja o inimigo (ex: paredes)
