@@ -24,7 +24,7 @@ public class OrbitingWeapon : MonoBehaviour
 
         // Flip horizontal quando o mouse está à esquerda do jogador
         Vector3 scale = transform.localScale;
-        scale.y = (mouseWorldPos.x < player.position.x) ? -0.5f : 0.5f; //a escala é a atual baseada na pistola, posteriormente pode ser necessário fazer de forma mais modular
+        scale.y = (mouseWorldPos.x < player.position.x) ? -1f : 1f; //a escala é a atual baseada na pistola, posteriormente pode ser necessário fazer de forma mais modular
         transform.localScale = scale;
     }
 }

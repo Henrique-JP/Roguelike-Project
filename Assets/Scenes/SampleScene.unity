@@ -1169,15 +1169,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1179347768649010266, guid: e91a2699494c5d841aa4acbb2672f6ee, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1179347768649010266, guid: e91a2699494c5d841aa4acbb2672f6ee, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1179347768649010266, guid: e91a2699494c5d841aa4acbb2672f6ee, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1179347768649010266, guid: e91a2699494c5d841aa4acbb2672f6ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2231,7 +2231,7 @@ PrefabInstance:
     - target: {fileID: 377024682784476525, guid: f321f45bc44da4a4e8dac6e8e74815e1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7364682651488144517, guid: 5960c48785e01e3498b4cbfb660a6022, type: 3}
+      objectReference: {fileID: -9108119375840019522, guid: c52f754e548356d4e923126bd6739ff5, type: 3}
     - target: {fileID: 2663300282004128728, guid: f321f45bc44da4a4e8dac6e8e74815e1, type: 3}
       propertyPath: bulletPrefab
       value: 
